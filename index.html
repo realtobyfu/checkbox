@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+
+
+  <input type="checkbox" class="all" onClick="checkAll()" /><div class="t" style="display:inline">Check All</div>
+  <br /><br />
+  <input type="checkbox" value="bar1">first <br />
+  <input type="checkbox" value="bar2">second<br />
+  <input type="checkbox" value="bar3">third<br />
+  <input type="checkbox" value="bar4">fourth<br />
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+  <script language="JavaScript">
+
+    function uncheckAll() {
+      document.querySelectorAll('input[type="checkbox"]')
+        .forEach(el => el.checked = false);
+      $(".t").text("Check All")
+      $(".all").attr("onClick", "checkAll()");
+    }
+
+    function checkAll() {
+      document.querySelectorAll('input[type="checkbox"]')
+        .forEach(el => el.checked = true);
+
+      $(".t").text("Uncheck All");
+      $(".all").attr("onClick", "uncheckAll()");
+    }
+  </script>
+
+</body>
+
+</html>
